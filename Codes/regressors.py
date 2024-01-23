@@ -28,7 +28,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LinearRegression, Lasso, Ridge
+from sklearn.linear_model import Lasso, Ridge
 from sklearn.svm import SVR
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
@@ -58,40 +58,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
-
-
-# ## Linear Regression
-
-# In[65]:
-
-
-# Initializing model
-linear_reg = LinearRegression()
-
-# Defining hyperparameters (Linear Regression doesn't have hyperparameters to tune like Lasso or Ridge)
-param_grid = {}  # Empty dictionary as Linear Regression doesn't have specific hyperparameters
-
-# Performing GridSearchCV (Not for hyperparameter tuning, but for consistency)
-grid_search = GridSearchCV(estimator=linear_reg, param_grid=param_grid, 
-                           cv=5, scoring='neg_mean_squared_error', verbose=1)
-
-# Fitting the model on the entire training data
-grid_search.fit(X_train, y_train)
-
-# Using the best model obtained directly (as Linear Regression doesn't have hyperparameters to tune)
-best_linear_reg = grid_search.best_estimator_
-best_linear_reg.fit(X_train, y_train)
-
-# Predicting on the test set using the final model
-y_pred = best_linear_reg.predict(X_test)
-
-# Calculating RMSE (Root Mean Squared Error) on the test set
-mse = mean_squared_error(y_test, y_pred)
-print(f"Mean Squared Error: {mse}")
-
-# Calculating R Squared Error (R2 Score)
-r2 = r2_score(y_test, y_pred)
-print(f"R-squared (R2) Score: {r2}")
 
 
 # ## Lasso Regression
