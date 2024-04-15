@@ -3,3 +3,7 @@ Welcome to our repository dedicated to the prediction of residential property pr
 In the notebook script titled "main.ipynb," the project is presented along with its detailed findings, and the final section includes a comparison of these findings. This comprehensive exploration aims to fine-tune predictive accuracy, specifically for price estimation. In the "code" folder, you will find the implemented codes to process the data and a Python file of 'main.ipynb' saved as 'regressors.py'. Through exhaustive evaluations and careful parameter tuning using grid search methodologies, we've aimed to identify the best parameter sets tailored to our dataset's characteristics. The techniques applied to analyze house features could be valuable for similar data types, providing insights.
 
 Our findings for this dataset highlight the exceptional effectiveness of tree-based models and ensemble techniques when compared to other methods. Dive into our repository to explore our journey and extract insights into the most efficient strategies for predicting house prices.
+
+<img width="400" alt="image" src="https://github.com/puja-urmi/House-Value-Predictor/assets/150852458/4913713f-01c3-45c1-9a1b-48fdf330df04">
+<img width="400" alt="image" src="https://github.com/puja-urmi/House-Value-Predictor/assets/150852458/a45a8a83-12e7-4c9b-ac64-47e6ed37096a">
+
